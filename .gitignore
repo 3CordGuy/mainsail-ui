@@ -113,6 +113,7 @@ dist
 
 # testing
 /coverage
+bundle-visualizer.html
 
 # production
 /build

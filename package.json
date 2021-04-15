@@ -2,9 +2,10 @@
   "name": "mainsail-ui",
   "version": "0.6.4",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
   "files": [
+    "dist/index.cjs.js",
     "dist/index.js",
     "README.md",
     "LICENSE"
@@ -17,7 +18,8 @@
     "scaffold": "plop",
     "plop": "plop",
     "test": "react-scripts test",
-    "build": "rollup -c",
+    "prebuild": "rimraf dist",
+    "build": "npm run prebuild && rollup -c",
     "build-sass-external": "rimraf css && node-sass --output-style expanded src/components/core/index.scss ./dist/css/mainsail.css && postcss --use autoprefixer --map --output ./dist/css/mainsail.css ./dist/css/mainsail.css && cleancss -o ./dist/css/mainsail.min.css ./dist/css/mainsail.css",
     "build-icons": "npx @svgr/cli --icon --out-dir src/components/Icons src/assets/icons --replace-attr-values '#003462=currentColor'",
     "start": "start-storybook -p 6006 -s src/assets",
@@ -55,8 +57,6 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "@auto-it/npm": "^10.15.0",
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
@@ -97,10 +97,13 @@
     "plop": "^2.7.4",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-scripts": "^4.0.1",
-    "rollup": "^2.37.1",
+    "rollup": "^2.45.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.0"
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-visualizer": "^5.3.6"
   },
   "author": "Josh Weaver <joshweaver@breezechms.com>",
   "auto": {

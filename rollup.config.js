@@ -3,21 +3,22 @@ import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import { visualizer } from "rollup-plugin-visualizer";
 
 import pkg from "./package.json";
 
 export default {
-    input: "src/index.js",
+    input: ["src/components/core/index.js"],
     output: [
         {
-            name: "mainsail-ui",
-            sourcemap: true,
             file: pkg.main,
-            format: "umd",
-            globals: {
-                lodash: "_",
-                react: "React",
-            },
+            format: "cjs",
+            sourcemap: true,
+        },
+        {
+            file: pkg.module,
+            format: "es",
+            sourcemap: true,
         },
     ],
     plugins: [
@@ -35,5 +36,11 @@ export default {
         babel({ exclude: "node_modules/**", babelHelpers: "bundled" }),
         resolve(),
         commonjs(),
+        process.env.NODE_ENV !== "production" &&
+            visualizer({
+                filename: "bundle-visualizer.html",
+                open: true,
+                projectRoot: "/src",
+            }),
     ],
 };
