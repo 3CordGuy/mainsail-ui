@@ -7,14 +7,9 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 import pkg from "./package.json";
 
-export default {
-    input: ["src/components/core/index.js"],
+const esModuleBundling = {
+    input: "src/components/core/index.js",
     output: [
-        {
-            file: pkg.main,
-            format: "cjs",
-            sourcemap: true,
-        },
         {
             file: pkg.module,
             format: "es",
@@ -44,3 +39,34 @@ export default {
             }),
     ],
 };
+
+// Core CommonJS export (no tree shaking)
+const cjsBundling = {
+    input: "src/components/core/index.js",
+    output: [
+        {
+            file: pkg.main,
+            format: "cjs",
+            sourcemap: true,
+            // exports: "auto",
+        },
+    ],
+    plugins: [
+        peerDepsExternal(),
+        postcss({
+            use: ["sass"],
+            config: {
+                path: "./postcss.config.js",
+            },
+            minimize: true,
+            inject: {
+                insertAt: "bottom",
+            },
+        }),
+        babel({ exclude: "node_modules/**", babelHelpers: "bundled" }),
+        resolve(),
+        commonjs(),
+    ],
+};
+
+export default [cjsBundling, esModuleBundling];
