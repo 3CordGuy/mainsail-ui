@@ -179,3 +179,5 @@ FormControl.defaultProps = {
 };
 
 FormControl.widths = widths;
+
+export default FormControl;

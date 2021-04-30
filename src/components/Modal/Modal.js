@@ -312,10 +312,7 @@ Modal.defaultProps = {
     maxWidth: "500px",
 };
 
-/*
- * Tip: Be sure to attach any prop enums separately for convenience
- * use the plural form of the prop name
- * Modal.variants = variants
- */
 Modal.intents = intents;
 Modal.confirmVariants = confirmVariants;
+
+export default Modal;

@@ -156,3 +156,5 @@ Icon.defaultProps = {
 Icon.names = names;
 Icon.sizes = sizes;
 Icon.colors = colors;
+
+export default Icon;

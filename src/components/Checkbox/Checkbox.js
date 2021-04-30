@@ -194,5 +194,6 @@ CheckboxGroup.propTypes = {
 
 Checkbox.displayName = "Checkbox";
 CheckboxGroup.displayName = "CheckboxGroup";
-
 Checkbox.colors = colors;
+
+export default Checkbox;

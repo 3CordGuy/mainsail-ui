@@ -73,3 +73,5 @@ Transition.defaultProps = {
 };
 
 Transition.animations = animations;
+
+export default Transition;

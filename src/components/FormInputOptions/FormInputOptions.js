@@ -74,3 +74,5 @@ FormInputOptions.defaultProps = {
 
 FormInputOptions.widths = widths;
 FormInputOptions.displayName = "FormInputOptions";
+
+export default FormInputOptions;

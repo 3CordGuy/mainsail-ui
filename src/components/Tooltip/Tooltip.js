@@ -172,3 +172,5 @@ Tooltip.defaultProps = {
 };
 
 Tooltip.placements = placements;
+
+export default Tooltip;

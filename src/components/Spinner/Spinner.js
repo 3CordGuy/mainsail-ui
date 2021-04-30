@@ -45,3 +45,5 @@ Spinner.defaultProps = {
 };
 
 Spinner.colors = colors;
+
+export default Spinner;

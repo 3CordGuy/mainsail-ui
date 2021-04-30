@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "files": [
-    "dist/index.js",
+    "dist/**/*.js",
+    "dist/**/*.map",
     "README.md",
     "LICENSE"
   ],
@@ -68,6 +69,7 @@
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-multi-entry": "^4.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
     "@storybook/addon-actions": "^6.2.5",
     "@storybook/addon-essentials": "^6.2.5",

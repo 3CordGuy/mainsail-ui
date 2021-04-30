@@ -44,5 +44,6 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {};
-
 Textarea.displayName = "Textarea";
+
+export default Textarea;

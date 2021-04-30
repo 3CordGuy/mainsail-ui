@@ -103,3 +103,5 @@ Badge.defaultProps = {
 Badge.sizes = sizes;
 Badge.colors = colors;
 Badge.variants = variants;
+
+export default Badge;

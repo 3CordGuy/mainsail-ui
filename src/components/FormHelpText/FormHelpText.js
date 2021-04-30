@@ -50,3 +50,5 @@ FormHelpText.defaultProps = {};
  */
 
 FormHelpText.displayName = "FormHelpText";
+
+export default FormHelpText;

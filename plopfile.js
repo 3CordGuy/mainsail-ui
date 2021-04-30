@@ -75,6 +75,14 @@ module.exports = function (plop) {
                 pattern: /SASS Global Import for plopjs/gi,
                 template: `@import "../{{pascalCase componentName}}/{{pascalCase componentName}}.scss";`,
             },
+
+            // Add new component as input in rollup config
+            {
+                type: "append",
+                path: "rollup.config.js",
+                pattern: /plop inserts new components/gi,
+                template: `\t\t"src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.js",`,
+            },
         ],
     });
 

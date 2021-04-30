@@ -67,3 +67,5 @@ AutoGrid.defaultProps = {
 };
 
 AutoGrid.flows = flows;
+
+export default AutoGrid;

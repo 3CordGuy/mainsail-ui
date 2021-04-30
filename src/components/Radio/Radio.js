@@ -158,5 +158,6 @@ RadioGroup.propTypes = {
 
 Radio.displayName = "Radio";
 RadioGroup.displayName = "RadioGroup";
-
 Radio.colors = colors;
+
+export default { Radio, RadioGroup };
