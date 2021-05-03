@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { classify } from "utility/classify";
 import { Icon } from "components/Icon/Icon";
 
-import "./Badge.scss";
+import styles from "./Badge.module.scss";
 
 export const sizes = {
     sm: "sm",
@@ -54,7 +54,7 @@ export const Badge = ({
         <span
             className={classify(
                 className,
-                "mainsail-badge",
+                styles["mainsail-badge"],
                 color,
                 size,
                 variant,

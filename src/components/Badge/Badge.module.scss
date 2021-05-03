@@ -9,7 +9,7 @@
     padding: 4px;
     border-radius: 9999px;
 
-    &.sm {
+    &:global(.sm) {
         @include mainsail-body-text-small();
         font-weight: 700;
         padding: 5px 7px;
@@ -19,7 +19,7 @@
             width: 12px;
         }
     }
-    &.lg {
+    &:global(.lg) {
         @include mainsail-body-text-regular();
         font-weight: 700;
         padding: 5px 9px;
@@ -30,7 +30,7 @@
         }
     }
 
-    &.blue {
+    &:global(.blue) {
         background-color: $mainsail-blue-light;
         color: $mainsail-blue-middle;
 
@@ -39,7 +39,7 @@
         }
     }
 
-    &.green {
+    &:global(.green) {
         background-color: $mainsail-green-light;
         color: $mainsail-green-middle;
 
@@ -48,7 +48,7 @@
         }
     }
 
-    &.violet {
+    &:global(.violet) {
         background-color: $mainsail-violet-light;
         color: $mainsail-violet-middle;
 
@@ -57,7 +57,7 @@
         }
     }
 
-    &.orange {
+    &:global(.orange) {
         background-color: $mainsail-orange-light;
         color: $mainsail-orange-middle;
 
@@ -66,7 +66,7 @@
         }
     }
 
-    &.pink {
+    &:global(.pink) {
         background-color: $mainsail-pink-light;
         color: $mainsail-pink-middle;
 
@@ -75,7 +75,7 @@
         }
     }
 
-    &.red {
+    &:global(.red) {
         background-color: $mainsail-red-light;
         color: $mainsail-red-middle;
 
@@ -84,7 +84,7 @@
         }
     }
 
-    &.neutral {
+    &:global(.neutral) {
         background-color: $mainsail-neutral-5;
         color: $mainsail-neutral-2;
 
@@ -103,17 +103,17 @@
         padding: 2px 3px;
     }
 
-    &.removable {
-        &.sm {
+    &:global(.removable) {
+        &:global(.sm) {
             padding-right: 3px;
             padding-left: 8px;
         }
-        &.lg {
+        &:global(.lg) {
             padding-right: 4px;
         }
     }
 
-    &.rounded {
+    &:global(.rounded) {
         border-radius: 9999px;
 
         button {
@@ -125,7 +125,7 @@
         }
     }
 
-    &.square {
+    &:global(.square) {
         border-radius: $mainsail-button-border-radius;
 
         button {
